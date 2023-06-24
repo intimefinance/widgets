@@ -1,7 +1,7 @@
 import { TransactionResponse } from '@ethersproject/abstract-provider'
+import { SwapRouter, UNIVERSAL_ROUTER_ADDRESS } from '@intimefinance/universal-router-sdk'
 import { sendTransaction } from '@uniswap/conedison/provider/index'
 import { TradeType } from '@uniswap/sdk-core'
-import { SwapRouter, UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk'
 import { SupportedChainId } from 'constants/chains'
 import { TWO_PERCENT } from 'constants/misc'
 import { InterfaceTrade } from 'state/routing/types'

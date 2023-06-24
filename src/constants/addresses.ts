@@ -41,3 +41,8 @@ export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
   [SupportedChainId.GOERLI]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
   [SupportedChainId.RINKEBY]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
 }
+
+export const V2_FACTORY_ADDRESSES: AddressMap = {
+  ...constructSameAddressMap('0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'),
+  [SupportedChainId.CORE_TEST]: '0x7f7ad80Cb22c591e1064d96c9A076a47C3374f08',
+}

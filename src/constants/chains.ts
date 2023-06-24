@@ -21,6 +21,8 @@ export enum SupportedChainId {
   CELO_ALFAJORES = 44787,
 
   BNB = 56,
+
+  CORE_TEST = 1115,
 }
 
 export enum ChainName {

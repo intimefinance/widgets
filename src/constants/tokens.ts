@@ -130,6 +130,21 @@ export const USDC_BNB_CHAIN = new Token(
   'USDC',
   'USDC'
 )
+// Core Test Chain
+export const USDC_CORE_TEST = new Token(
+  SupportedChainId.CORE_TEST,
+  '0x65A8173c48B49a1320cc4513DCD4792e315fE2b1',
+  6,
+  'USDC',
+  'USD Coin'
+)
+export const USDT_CORE_TEST = new Token(
+  SupportedChainId.CORE_TEST,
+  '0x5700aff131756461537420e8f434d9f43ef97c48',
+  6,
+  'USDT',
+  'Tether USD'
+)
 export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.MAINNET]: USDC_MAINNET,
   [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM,
@@ -145,6 +160,7 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.KOVAN]: USDC_KOVAN,
   [SupportedChainId.ROPSTEN]: USDC_ROPSTEN,
   [SupportedChainId.BNB]: USDC_BNB_CHAIN,
+  [SupportedChainId.CORE_TEST]: USDC_CORE_TEST,
 }
 export const DAI_POLYGON = new Token(
   SupportedChainId.POLYGON,

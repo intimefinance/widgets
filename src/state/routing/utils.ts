@@ -1,7 +1,8 @@
-import { MixedRouteSDK } from '@uniswap/router-sdk'
+import { MixedRouteSDK } from '@intimefinance/router-sdk'
+import { Pair, Route as V2Route } from '@intimefinance/v2-sdk'
 import { Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { Pair, Route as V2Route } from '@uniswap/v2-sdk'
 import { FeeAmount, Pool, Route as V3Route } from '@uniswap/v3-sdk'
+import { V2_FACTORY_ADDRESSES } from 'constants/addresses'
 import { isPolygonChain } from 'constants/chains'
 import { nativeOnChain } from 'constants/tokens'
 import { PoolType, SwapRouterNativeAssets } from 'hooks/routing/types'
@@ -127,6 +128,7 @@ const parsePool = ({ fee, sqrtRatioX96, liquidity, tickCurrent, tokenIn, tokenOu
 
 const parsePair = ({ reserve0, reserve1 }: V2PoolInRoute): Pair =>
   new Pair(
+    V2_FACTORY_ADDRESSES[reserve0.token.chainId],
     CurrencyAmount.fromRawAmount(parseToken(reserve0.token), reserve0.quotient),
     CurrencyAmount.fromRawAmount(parseToken(reserve1.token), reserve1.quotient)
   )
